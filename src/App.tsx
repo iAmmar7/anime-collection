@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import HomePage from './app/containers/HomePage';
 
 const AppContainer = styled.div`
   display: flex;
@@ -8,7 +9,11 @@ const AppContainer = styled.div`
 `;
 
 function App() {
-  return <AppContainer>Hello World!</AppContainer>;
+  return (
+    <AppContainer>
+      <HomePage />
+    </AppContainer>
+  );
 }
 
 export default App;
