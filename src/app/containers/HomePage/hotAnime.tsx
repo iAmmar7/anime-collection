@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { useAppSelector } from '../../hooks';
 
@@ -42,11 +41,11 @@ function HotAnime() {
   return (
     <HotAnimeContainer>
       {animePage.Page?.media?.map((anime) => (
-        <AnimeItemContainer key={anime.id}>
+        <AnimeItemContainer key={anime?.id}>
           <AnimeCover>
-            <img src={anime.coverImage.extraLarge || ''} alt="anime-cover" />
+            <img src={anime?.coverImage?.extraLarge || ''} alt="anime-cover" />
           </AnimeCover>
-          <AnimeTitle>{anime.title.english}</AnimeTitle>
+          <AnimeTitle>{anime?.title?.english}</AnimeTitle>
         </AnimeItemContainer>
       ))}
     </HotAnimeContainer>
