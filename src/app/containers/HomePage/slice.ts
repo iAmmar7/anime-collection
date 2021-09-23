@@ -1,7 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
-  animePage: null,
+interface HomePageInitialState {
+  animePage: {
+    Page?: {
+      media?: Array<any>;
+    };
+  };
+}
+
+const initialState: HomePageInitialState = {
+  animePage: {},
 };
 
 // Slice is Reducer with bunch of other features

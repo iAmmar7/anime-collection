@@ -35,13 +35,20 @@ const AnimeTitle = styled.h6`
 function HotAnime() {
   const { animePage } = useAppSelector((state) => state.homePage);
 
-  console.log('state', animePage);
+  const isEmpty = !animePage || !animePage?.Page || animePage?.Page?.media?.length === 0;
 
-  //   const isEmpty = !animePage || !animePage.Page || !animePage.Page.media.length === 0;
+  if (isEmpty) return null;
 
   return (
     <HotAnimeContainer>
-      <AnimeItemContainer>Wait On</AnimeItemContainer>
+      {animePage.Page?.media?.map((anime) => (
+        <AnimeItemContainer key={anime.id}>
+          <AnimeCover>
+            <img src={anime.coverImage.extraLarge || ''} alt="anime-cover" />
+          </AnimeCover>
+          <AnimeTitle>{anime.title.english}</AnimeTitle>
+        </AnimeItemContainer>
+      ))}
     </HotAnimeContainer>
   );
 }
