@@ -1,4 +1,4 @@
-A simple application to consume Anilist GraphQL API.
+A simple application to consume Anime GraphQL API.
 
 ## How to run?
 - yarn install
