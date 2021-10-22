@@ -1,4 +1,8 @@
+# anime-collection
 A simple application to consume Anime GraphQL API.
+
+## *Purpose*
+:bangbang: *The purpose of this project is to consume third party **GraphQL API** with **Apollo** using **Typescript** and store the data in Redux using **Redux Toolkit*** :bangbang:
 
 ## How to run?
 - yarn install
